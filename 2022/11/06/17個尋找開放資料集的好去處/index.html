@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="gs://elblog-e7e29.appspot.com/ellothink_fcon_16_v2.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="gs://elblog-e7e29.appspot.com/ellothink_fcon_16_v1.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="你曾經有過不知去哪裡尋找參考用資料集的困擾嗎？從事資料科學領域的工作者，最需要的就是可靠且易使用的資料。在這邊筆者分享17個自己覺得易使用的資料來源，供同業參考切磋。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="17個尋找開放資料集的好去處">
+<meta property="og:url" content="http://example.com/2022/11/06/17%E5%80%8B%E5%B0%8B%E6%89%BE%E9%96%8B%E6%94%BE%E8%B3%87%E6%96%99%E9%9B%86%E7%9A%84%E5%A5%BD%E5%8E%BB%E8%99%95/index.html">
+<meta property="og:site_name" content="Ellothink">
+<meta property="og:description" content="你曾經有過不知去哪裡尋找參考用資料集的困擾嗎？從事資料科學領域的工作者，最需要的就是可靠且易使用的資料。在這邊筆者分享17個自己覺得易使用的資料來源，供同業參考切磋。">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-11-06T15:43:01.000Z">
+<meta property="article:modified_time" content="2022-11-06T16:23:09.914Z">
+<meta property="article:author" content="Ellomorce">
+<meta property="article:tag" content="Datasets">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/11/06/17%E5%80%8B%E5%B0%8B%E6%89%BE%E9%96%8B%E6%94%BE%E8%B3%87%E6%96%99%E9%9B%86%E7%9A%84%E5%A5%BD%E5%8E%BB%E8%99%95/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>17個尋找開放資料集的好去處 | Ellothink</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Ellothink</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/06/17%E5%80%8B%E5%B0%8B%E6%89%BE%E9%96%8B%E6%94%BE%E8%B3%87%E6%96%99%E9%9B%86%E7%9A%84%E5%A5%BD%E5%8E%BB%E8%99%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="gs://elblog-e7e29.appspot.com/elavatar.png">
+      <meta itemprop="name" content="Ellomorce">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ellothink">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          17個尋找開放資料集的好去處
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2022-11-06 23:43:01" itemprop="dateCreated datePublished" datetime="2022-11-06T23:43:01+08:00">2022-11-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2022-11-07 00:23:09" itemprop="dateModified" datetime="2022-11-07T00:23:09+08:00">2022-11-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Data-Science/" itemprop="url" rel="index"><span itemprop="name">Data Science</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="閱讀次數">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-users"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span class="firestore-visitors-count"></span>
+            </span>
+            <div class="post-description">你曾經有過不知去哪裡尋找參考用資料集的困擾嗎？從事資料科學領域的工作者，最需要的就是可靠且易使用的資料。在這邊筆者分享17個自己覺得易使用的資料來源，供同業參考切磋。</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>你曾經有過不知去哪裡尋找參考用資料集的困擾嗎？從事資料科學領域的工作者，最需要的就是可靠且易使用的資料。在這邊筆者分享17個自己覺得易使用的資料來源，供同業參考切磋。</p>
+<p><a target="_blank" rel="noopener" href="https://datasetsearch.research.google.com/">Google Dataset Search</a><br>谷歌的強大不用解釋，這項搜尋工具可供使用者針對特定議題搜尋可用的公開數據，前提是你非常清楚自己需要什麼數據。   </p>
+<p><a target="_blank" rel="noopener" href="https://data.world/">data.world</a><br>data.world是一個專為分享開放數據而設計的社群平台，模式類似於Github。他的搜尋介面使用起來很便利，且有提供csv、json等格式的預覽。除了可透過瀏覽器使用外，該平台提供了一個名為〝datadotworld〞的Python Library，讓使用者可以在程式碼中呼叫RESTful API並直接取用數據。</p>
+<p><a href="">Kaggle</a><br>全球最大的資料科學社群，隨時都有資料分析競賽在平台上進行，也有許多使用者會在此分享資料集與程式碼。<br>除了競賽與資料集外，Kaggle也提供了原生的雲端IDE，讓使用者可以直接在平台上以GPU進行分析與訓練，對電腦算力不足的使用者來說是一大福音。   </p>
+<p><a href="">Papers With Code</a><br>AI領域論文及程式碼搜尋神器，該平台將ArXiv上最新機器學習的論文與Github中的程式碼對應起來，並依照SOTA、Datasets、Methods進行分類，讓使用者可以快速地找到對應的論文、程式碼與資料集。<br>除了尋找論文與資料集外，平台還能顯示該則論文程式碼的流行度、Github上程式碼的收藏數等，能協助使用者判讀目前SOTA的趨勢。</p>
+<p><a href="">UCI Machine Learning Repository</a><br>由加州大學爾灣分校的David Aha於1987年創建，是最老牌的機器學習開放資料集分享平台，上面有許多機器學習領域裡面最經典的資料集。   </p>
+<p><a href="">Datahub</a><br>由數據服務商Datopian提供的開放資料平台，依照內容類別提供大量政府、財經、商業娛樂、教育、環境等方面之數據。   </p>
+<p><a href="">政府資料開放平臺（data.gov.tw）</a><br>台灣政府提供的資料開放平台，內容以台灣政府機關單位資料為主。資料集以內容進行分類，適合用於研究台灣相關議題。   </p>
+<p><a href="">Data.gov</a><br>美國政府提供的資料開放平台，使用上以站內搜尋為主，預設類別較少，僅有農業、氣候、能源、地方政府、海運、海洋、長照等。   </p>
+<p><a href="">data.europa.eu</a><br>歐盟政府提供的資料開放平台，分類詳細且易於搜尋，除了可直接下載資料集外，同時提供了SPARQL Search功能。   </p>
+<p><a href="">Hugging Face</a><br>Hugging Face原本以提供chatbot服務為主，並在github上開放了一個Transfomer模型庫，沒想到這個庫火紅了起來。<br>目前提供了超過100,000個預訓練模型及10,000個以上的資料集，並撰寫了一個Python Library供使用者直接在程式中呼叫模型與資料集，非常方便。   </p>
+<p><a href="">Awesome Datasets</a><br>這是一個Github上的開源資料分享專案，這個專案的Contibuter們分享了各式各樣類別的資料來源，包括許多非常專門（冷門）的資料源。   </p>
+<p><a href="">Tidy Tuesday</a><br>同樣是Github上的開源資料分享專案，創建目的是讓Contibuter們定期性地分享R語言的資料集，作為學習與訓練的用途。   </p>
+<p><a href="">Yahoo Finance</a><br>最老也是最經典的財經媒體與資料庫，是許多股票數據分析的原始資料源，提供API讓使用者直接抓取資料，但使用前須先申請帳號以及API Token。   </p>
+<p><a href="">Python API Wrappers</a><br>這是一個Github上的專案，目的是整理羅列所有開放資料集的API Wrappers，以便於讓使用者快速找到你的程式碼所需要的API。   </p>
+<p><a href="">Pandas Data Reader</a><br>由Pandas社群所開發的Python 函式庫，讓使用者可直接使用Pandas匯入內建的資料集，資料集來源主要是財經類資料庫，包括Yahoo Finance、Quandl等等。   </p>
+<p><a href="">TensorFlow Datasets</a><br>TensorFlow內建的資料集，依照機器學習領域進行分類，如Object Detection、Recommendation等，對使用者練習TensorFlow來說非常方便。   </p>
+<p><a href="">Imagenet</a><br>ImageNet是一個大型視覺資料庫，用於視覺目標辨識軟體研究。該專案已手動標註了1500萬以上的圖像，並含有2萬個以上的典型類別。   </p>
+<p>除了以上17個資料來源之外，也有一些來源擁有高品質的資料，但在使用上不是那麼便利的，這邊筆者一併提供：</p>
+<p><a href="">Data Is Plural</a><br>這個以分享資料集為主的電子報是由BuzzFeed News的編輯Jeremy Singer-Vine所發起，標榜每周分享一次新的開源資料集，資料源同時會整理在一張Google Sheet中。缺點是資料集並沒有分類，要從這裡找到需要的資料集並不容易。</p>
+<p><a href="">Reddit Datasets</a><br>Reddit的Datasets討論版中有許多版友分享開源資料集，若有需要也可以上板發文徵求資料集，但爬文找資料集的效率並不高。   </p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Datasets/" rel="tag"># Datasets</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/04/02/Ello%E8%AB%87%E7%92%B0%E5%AD%B8-%E8%89%BE%E7%88%BE%E7%99%BB%E6%B3%95%E7%92%B0%E8%B1%A1%E5%BE%B5%E8%91%97%E4%BB%80%E9%BA%BC%EF%BC%9F/" rel="prev" title="Ello談環學-艾爾登法環象徵著什麼？">
+      <i class="fa fa-chevron-left"></i> Ello談環學-艾爾登法環象徵著什麼？
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Ellomorce"
+      src="gs://elblog-e7e29.appspot.com/elavatar.png">
+  <p class="site-author-name" itemprop="name">Ellomorce</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Ellomorce" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Ellomorce" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ellothink - 轉載文章請註明原作者(Ellomorce)及原文連結(Url)。</span>
+</div>
+
+        
+
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-firestore.js"></script>
+  <script>
+    firebase.initializeApp({
+      apiKey   : 'AIzaSyCCXj9X_9dwTfJRmmbyyOUH68qUncU7kAo',
+      projectId: 'elblog-e7e29'
+    });
+
+    function getCount(doc, increaseCount) {
+      // IncreaseCount will be false when not in article page
+      return doc.get().then(d => {
+        var count = 0;
+        if (!d.exists) { // Has no data, initialize count
+          if (increaseCount) {
+            doc.set({
+              count: 1
+            });
+            count = 1;
+          }
+        } else { // Has data
+          count = d.data().count;
+          if (increaseCount) {
+            // If first view this article
+            doc.set({ // Increase count
+              count: count + 1
+            });
+            count++;
+          }
+        }
+
+        return count;
+      });
+    }
+
+    function appendCountTo(el) {
+      return count => {
+        el.innerText = count;
+      }
+    }
+  </script>
+  <script>
+    (function() {
+      var db = firebase.firestore();
+      var articles = db.collection('articles');
+
+      if (CONFIG.page.isPost) { // Is article page
+        var title = document.querySelector('.post-title').innerText.trim();
+        var doc = articles.doc(title);
+        var increaseCount = CONFIG.hostname === location.hostname;
+        if (localStorage.getItem(title)) {
+          increaseCount = false;
+        } else {
+          // Mark as visited
+          localStorage.setItem(title, true);
+        }
+        getCount(doc, increaseCount).then(appendCountTo(document.querySelector('.firestore-visitors-count')));
+      } else if (CONFIG.page.isHome) { // Is index page
+        var promises = [...document.querySelectorAll('.post-title')].map(element => {
+          var title = element.innerText.trim();
+          var doc = articles.doc(title);
+          return getCount(doc);
+        });
+        Promise.all(promises).then(counts => {
+          var metas = document.querySelectorAll('.firestore-visitors-count');
+          counts.forEach((val, idx) => {
+            appendCountTo(metas[idx])(val);
+          });
+        });
+      }
+    })();
+  </script>
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
